@@ -1,6 +1,15 @@
 <h1>Amplitude Modulation And Demodulation</h1>
 <h2>Introduction</h2>
-The frequency of a RF channel is the frequency of the carrier wave. The carrier wave by itself doesn’t consist of any information. For the transmission of messages, a separate baseband signal is imposed on the carrier wave. This process is known as modulation. Amplitude modulation is one of the three modulation techniques, that is used to increase the base message signal frequency to a higher frequency for proper electronic communication and wave transmission.
+The frequency of a RF channel is the frequency of the carrier wave. The carrier wave by itself doesn’t consist of any information. For the transmission of messages, a separate baseband signal is imposed on the carrier wave. This process is known as modulation. Amplitude modulation is one of the three modulation techniques, that is used to increase the base message signal frequency to a higher frequency for proper electronic communication and wave transmission. 
+<br><br>
+<ins><b>With the help of this MATLAB project, I am showcasing the state of input wave while transitioning from a modulated to a demodulated wave through graphs. Please follow the steps discussed in the next section to see the output first hand or follow the rest of the report to understand the work done.</b></ins>
+<h2>Code execution steps:</h2>
+
+1. Run the MATLAB file Amplitude_Modulation_and_Demodulation(.m) which contains the core logic for showcasing amplitude modulation and demodulation.
+
+2. Enter the frequency and amplitude of the message signal, the frequency of the carrier wave and the phase difference between the carrier wave and the message signal when prompted.
+   
+3. Output obtained contains a compilation of five graphs, that include the signal wave, carrier wave, modulated signal wave, demodulated signal wave and filtered demodulated signal wave, all plotted against time respectively.
 <h2>Advantages of modulation</h2>
 
 - For the proper transmission of signals, an antenna of size ≥ λ/4 (where λ is the wavelength of the signal being transmitted) is required. Thus, baseband message signals are modulated with high frequency carrier signals. This modulation process increases the frequency of the signal being transmitted and therefore decreases the wavelength (∵ c= λ*μ), which helps in decreasing the size of the antenna.
@@ -100,12 +109,3 @@ Z1 = x(t)*(cos2(wnt+phi)) = (x(t))/2 + [x(t)*(cos2 (wnt+phi))]/2
 On Demodulation and filtering the term [x(t)*(cos2 (wnt+phi))]/2 gets removed from the final signal. The desired signal is thus transmitted successfully with its amplitude being half of the input message signal.
 <p align = "center"><img src = "https://github.com/PratikPuri/Amplitude-modulation-and-demodulation-of-waves/blob/feature-readme/images/Plot6.jpg" width = 400 height = 300 align ="center">
 <br><b>The transmitted signal at different instances(plotted against time as X – axis)</b></p>
-
----
-The MATLAB file Amplitude_Modulation_and_Demodulation(.m) contains the code for amplitude modulation and demodulation.
-
-To find the desired result run the code.
-
-Enter the frequency and amplitude of the message signal, the frequency of the carrier wave and the phase difference between the carrier wave and the message signal after running the code.
-
-Output obtained contains a compilation of five graphs, that include the signal wave, carrier wave, modulated signal wave, demodulated signal wave, filtered demodulated signal wave, all plotted against time respectively.
