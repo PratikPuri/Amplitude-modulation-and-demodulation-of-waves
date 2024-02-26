@@ -18,7 +18,7 @@ The frequency of a RF channel is the frequency of the carrier wave. The carrier 
 These are some of the reasons that state the importance of modulation in transmission of message signals.
 <h2>Procedure</h2>
 <p align = "center">
-<img src = "https://github.com/PratikPuri/Amplitude-modulation-and-demodulation-of-waves/blob/feature-readme/images/Flow.jpg"><br>
+<img src = "https://github.com/PratikPuri/Amplitude-modulation-and-demodulation-of-waves/blob/master/images/Flow.jpg"><br>
 <b>Basic Transmission Process</b>
 </p>
 <h2>MATLAB Code</h2>
@@ -82,7 +82,7 @@ This code is used to impose the message signal x(t) upon carrier wave y(t). The 
 
 Plot 1 | Plot 2 | Plot 3
 :-------------------------:|:-------------------------:|:-------------------------:
-![](https://github.com/PratikPuri/Amplitude-modulation-and-demodulation-of-waves/blob/feature-readme/images/Plot1.jpg) | ![](https://github.com/PratikPuri/Amplitude-modulation-and-demodulation-of-waves/blob/feature-readme/images/Plot2.jpg) | ![](https://github.com/PratikPuri/Amplitude-modulation-and-demodulation-of-waves/blob/feature-readme/images/Plot3.jpg)
+![](https://github.com/PratikPuri/Amplitude-modulation-and-demodulation-of-waves/blob/master/images/Plot1.jpg) | ![](https://github.com/PratikPuri/Amplitude-modulation-and-demodulation-of-waves/blob/master/images/Plot2.jpg) | ![](https://github.com/PratikPuri/Amplitude-modulation-and-demodulation-of-waves/blob/master/images/Plot3.jpg)
 
 Here the X axis is the time Axis
 - <h3>Demodulation</h3>
@@ -92,7 +92,7 @@ x=a.*sin(w.*t);
 y=cos(wn.*t + phi);
 z1=x.*y.*y;
 ```
-<p align = "center"><img src = "https://github.com/PratikPuri/Amplitude-modulation-and-demodulation-of-waves/blob/feature-readme/images/Plot4.jpg" width = 400 height = 300 align ="center"></p>
+<p align = "center"><img src = "https://github.com/PratikPuri/Amplitude-modulation-and-demodulation-of-waves/blob/master/images/Plot4.jpg" width = 400 height = 300 align ="center"></p>
 
 - <h2>Low Pass Filter</h2>
 ```
@@ -100,12 +100,12 @@ lpFilt = designfilt('lowpassfir', 'PassbandFrequency', 0.00001,...
 'StopbandFrequency', 0.0003, 'PassbandRipple', 0.5, ...'StopbandAttenuation', 65, 'DesignMethod', 'kaiserwin');
 l=filter(lpFilt, z1);
 ```
-<p align = "center"><img src = "https://github.com/PratikPuri/Amplitude-modulation-and-demodulation-of-waves/blob/feature-readme/images/Plot5.jpg" width = 400 height = 300 align ="center"></p>
+<p align = "center"><img src = "https://github.com/PratikPuri/Amplitude-modulation-and-demodulation-of-waves/blob/master/images/Plot5.jpg" width = 400 height = 300 align ="center"></p>
 
 ```
 Z1 = x(t)*(cos2(wnt+phi)) = (x(t))/2 + [x(t)*(cos2 (wnt+phi))]/2
 ```
 
 On Demodulation and filtering the term [x(t)*(cos2 (wnt+phi))]/2 gets removed from the final signal. The desired signal is thus transmitted successfully with its amplitude being half of the input message signal.
-<p align = "center"><img src = "https://github.com/PratikPuri/Amplitude-modulation-and-demodulation-of-waves/blob/feature-readme/images/Plot6.jpg" width = 400 height = 300 align ="center">
+<p align = "center"><img src = "https://github.com/PratikPuri/Amplitude-modulation-and-demodulation-of-waves/blob/master/images/Plot6.jpg" width = 400 height = 300 align ="center">
 <br><b>The transmitted signal at different instances(plotted against time as X – axis)</b></p>
